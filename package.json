@@ -1,0 +1,22 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "app1",
+    "libs/*"
+  ],
+  "scripts": {
+    "start1": "yarn workspace app1 start",
+    "start2": "yarn workspace app2 start",
+    "start3": "yarn workspace app3 start",
+    "lint1": "yarn workspace app1 lint",
+    "build-ui-kit": "cd libs/ui-kit && yarn build"
+  },
+  "dependencies": {
+    "copyfiles": "^2.1.0",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-scripts": "2.1.0"
+  }
+}
